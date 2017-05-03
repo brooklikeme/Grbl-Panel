@@ -556,7 +556,7 @@
     <value>Position</value>
   </data>
   <data name="tpOffsets.ToolTipText" xml:space="preserve">
-    <value>Cliquer pour régler à la position actuelle de la machine</value>
+    <value>Click to set to Current Machine Location</value>
   </data>
   <data name="tpOffsets.Text" xml:space="preserve">
     <value>Décalages</value>
@@ -761,5 +761,38 @@
   </data>
   <data name="dgGrblSettings.ToolTip" xml:space="preserve">
     <value>Pour envoyer une valeur modifiée à Grbl, double cliquez dessus.</value>
+  </data>
+  <data name="btnRapidOverride25.Text" xml:space="preserve">
+    <value>25%</value>
+  </data>
+  <data name="btnRapidOverride50.Text" xml:space="preserve">
+    <value>50%</value>
+  </data>
+  <data name="cbxStateOffset.Items1" xml:space="preserve">
+    <value>G54                                   G54</value>
+  </data>
+  <data name="cbxStateOffset.Items2" xml:space="preserve">
+    <value>G55                                   G55</value>
+  </data>
+  <data name="cbxStateOffset.Items3" xml:space="preserve">
+    <value>G56                                   G56</value>
+  </data>
+  <data name="cbxStateOffset.Items4" xml:space="preserve">
+    <value>G57                                   G57</value>
+  </data>
+  <data name="cbxStateOffset.Items5" xml:space="preserve">
+    <value>G58                                   G58</value>
+  </data>
+  <data name="cbxStateOffset.Items6" xml:space="preserve">
+    <value>G59                                   G59</value>
+  </data>
+  <data name="btnFileStep.ToolTip" xml:space="preserve">
+    <value>Single Step</value>
+  </data>
+  <data name="cbBaud.Items" xml:space="preserve">
+    <value>9600</value>
+  </data>
+  <data name="cbBaud.Items1" xml:space="preserve">
+    <value>115200</value>
   </data>
 </root>

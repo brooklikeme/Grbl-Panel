@@ -9,7 +9,7 @@
       <Value Profile="(Default)">115200</Value>
     </Setting>
     <Setting Name="JoggingUnitsMetric" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="Work0Cmd" Type="System.String" Scope="User">
       <Value Profile="(Default)">G90 G10 L20 P0 X0 Y0 Z0</Value>
