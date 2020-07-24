@@ -168,7 +168,10 @@ Public Class GrblGui
                 If Not _gui.tbSendData.ContainsFocus And
                     Not _gui.gbEditor.ContainsFocus Then ' in case user is working in MDI
                     Select Case msg.WParam
-                        ' Act on Distance Increment keyboard requests
+                        Case Keys.Enter And My.Computer.Keyboard.CtrlKeyDown And _gui.btnFileSend.Enabled
+                            _gui.btnFileSend.PerformClick()
+                            handled = True
+                            ' Act on Distance Increment keyboard requests
                         Case Keys.Add, Keys.Oemplus And My.Computer.Keyboard.ShiftKeyDown
                             _gui.changeDistanceIncrement(True)
                             handled = True
@@ -176,7 +179,7 @@ Public Class GrblGui
                             _gui.changeDistanceIncrement(False)
                             handled = True
 
-                        ' Act on Feed Rate keyboard requests
+                            ' Act on Feed Rate keyboard requests
                         Case Keys.Divide, &HBF
                             _gui.changeFeedRate(True)
                             handled = True
@@ -184,7 +187,7 @@ Public Class GrblGui
                             _gui.changeFeedRate(False)
                             handled = True
 
-                        ' Reset x,y,z axis to 0
+                            ' Reset x,y,z axis to 0
                         Case Keys.X And Not My.Computer.Keyboard.CtrlKeyDown
                             _gui.btnWorkX0.PerformClick()
                             handled = True
@@ -195,13 +198,13 @@ Public Class GrblGui
                             _gui.btnWorkZ0.PerformClick()
                             handled = True
 
-                        ' Reset all axes to 0
+                            ' Reset all axes to 0
                         Case Keys.Insert
                         Case Keys.A
                             _gui.btnWork0.PerformClick()
                             handled = True
 
-                        ' Motion
+                            ' Motion
                         Case Keys.Space
                             If _gui.btnStartResume.Text = "Start" Then
                                 _gui.btnHold.PerformClick()
@@ -210,12 +213,12 @@ Public Class GrblGui
                             End If
                             handled = True
 
-                        ' Single Step
+                            ' Single Step
                         Case Keys.O
                             _gui.btnFileStep.PerformClick()
                             handled = True
 
-                        ' Macro 1 execute
+                            ' Macro 1 execute
                         Case Keys.F2
                             Dim macro1 As Button = _gui.IsMacroBtn1()
                             If Not IsNothing(macro1) Then
@@ -223,7 +226,7 @@ Public Class GrblGui
                                 handled = True
                             End If
 
-                        ' Grbl State
+                            ' Grbl State
                         Case Keys.H And My.Computer.Keyboard.CtrlKeyDown
                             _gui.btnHold.PerformClick()
                             handled = True
@@ -234,7 +237,7 @@ Public Class GrblGui
                             _gui.btnReset.PerformClick()
                             handled = True
 
-                        ' Overrides
+                            ' Overrides
                         Case Keys.F And My.Computer.Keyboard.ShiftKeyDown
                             _gui.btnFeedPlus.PerformClick()
                             handled = True
